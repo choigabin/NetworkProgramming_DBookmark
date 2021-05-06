@@ -38,3 +38,6 @@ models -> admin -> views -> templates -> urls
     - bookmark/templates/bookmark bookmark_update.html, bookmark_list.html
     - bookmark/urls bookmark:update 
     - bookmark/models get_absolute_url() in Bookmark
+  
+- Bookmark Delete
+    - bookmark/views bookmark:update
