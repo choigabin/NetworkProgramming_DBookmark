@@ -33,11 +33,12 @@ models -> admin -> views -> templates -> urls
     - bookmark/templates/bookmark bookmar_detail.html, bookmark_list.html 
     - bookmark/urls bookmark:detail
   
-- Bookmark Update 
+- Update Bookmark
     - bookmark/views BookmarkUpdateView
     - bookmark/templates/bookmark bookmark_update.html, bookmark_list.html
     - bookmark/urls bookmark:update 
     - bookmark/models get_absolute_url() in Bookmark
   
-- Bookmark Delete
+- Delete Bookmark
     - bookmark/views bookmark:update
+    - bookmark/templates/bookmark bookmark_confirm_delete.html, bookmark_list.html
