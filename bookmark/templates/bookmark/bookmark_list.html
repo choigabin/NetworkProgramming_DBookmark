@@ -1,34 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>List Bookmark</title>
-</head>
-<body>
-<a href="{% url 'bookmark:add' %}">Add Bookmark</a>
-<table>
-    <thead>
-    <tr>
-        <th>#</th>
-        <th>Site Name</th>
-        <th>URL</th>
-        <th>Modify</th>
-        <th>Delete</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for bookmark in bookmark_list %}
+{% extends 'base.html' %}
+
+{% block title %} List Block {% endblock %}
+
+{% block content %}
+    <a href="{% url 'bookmark:add' %}">Add Bookmark</a>
+    <table>
+        <thead>
         <tr>
-            <td>{{ forloop.counter }}</td>
-            <td><a href="{% url 'bookmark:detail' pk=bookmark.id %}">{{ bookmark.name }}</a></td>
-            <td>{{ bookmark.url }}</td>
-            <td><a href="{% url 'bookmark:update' pk=bookmark.id %}">Modify</a></td>
-            <td><a href="{% url 'bookmark:delete' pk=bookmark.id %}">Delete</a></td>
+            <th>#</th>
+            <th>Site Name</th>
+            <th>URL</th>
+            <th>Modify</th>
+            <th>Delete</th>
         </tr>
-    {% endfor %}
-    </tbody>
-</table>.
-
-
-</body>
-</html>
+        </thead>
+        <tbody>
+        {% for bookmark in bookmark_list %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td><a href="{% url 'bookmark:detail' pk=bookmark.id %}">{{ bookmark.name }}</a></td>
+                <td>{{ bookmark.url }}</td>
+                <td><a href="{% url 'bookmark:update' pk=bookmark.id %}">Modify</a></td>
+                <td><a href="{% url 'bookmark:delete' pk=bookmark.id %}">Delete</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -45,3 +45,5 @@ models -> admin -> views -> templates -> urls
     - bookmark/urls bookmark:delete
   
 - 기능완성 💕😋💕
+
+- config/templates/base.html, extends, block title, block content
