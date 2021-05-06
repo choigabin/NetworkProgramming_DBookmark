@@ -32,4 +32,5 @@ models -> admin -> views -> templates -> urls
     - bookmark/views BookmarkDetailView
     - bookmark/templates bookmar_detail.html, bookmark_list.html 
     - bookmark/urls bookmark:detail
-    
+- Bookmark Update 
+    - bookmark/views BookmarkUpdateView
